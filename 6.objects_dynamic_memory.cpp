@@ -33,7 +33,7 @@ public:
 
 int main()
 {
-    // intialise array size
+    // intialise array of object size
     int productSize;
 
     cout << "How many products do you need? ";
@@ -41,7 +41,7 @@ int main()
     cout << endl;
 
     // instantiate the object with a maximum size = arraySize;
-    Product product[productSize];
+    Product *product = new Product[productSize];
 
     for (int i = 0; i < productSize; i++)
     {
@@ -71,6 +71,9 @@ int main()
         cout << "\t Price: £" << product[i].getPrice() << endl;
         cout << endl;
     }
+
+    cout << product;
+    delete[] product;
 
     return 0;
 }
