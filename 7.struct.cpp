@@ -10,37 +10,35 @@ struct Product
     float discount;
 };
 
-Product getProductStructDetails(Product product)
+void getProductStructDetails(Product *product)
 {
     cout << "Enter the product name: ";
-    cin >> product.name;
+    cin >> product->name;
 
     cout << "Enter the product price: ";
-    cin >> product.price;
+    cin >> product->price;
 
     cout << "Enter the product manufacturer: ";
-    cin >> product.manufacturer;
+    cin >> product->manufacturer;
 
     cout << "Enter the product discount: ";
-    cin >> product.discount;
-
-    return product;
+    cin >> product->discount;
 }
 
-void displayProductStruct(Product product)
+void displayProductStruct(Product *product)
 {
-    cout << "Product name " << product.name << endl;
-    cout << "Product price £" << product.price << endl;
-    cout << "Product manufacturer name " << product.manufacturer << endl;
-    cout << "Product discount £" << product.discount << endl;
+    cout << "Product name " << product->name << endl;
+    cout << "Product price £" << product->price << endl;
+    cout << "Product manufacturer name " << product->manufacturer << endl;
+    cout << "Product discount £" << product->discount << endl;
 }
 
 int main()
 {
-    Product product;
-
-    product = getProductStructDetails(product);
-    displayProductStruct(product);
+    Product product, *structPointer;
+    structPointer = &product;
+    getProductStructDetails(structPointer);
+    displayProductStruct(structPointer);
 
     return 0;
 }
