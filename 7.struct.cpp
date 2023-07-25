@@ -35,10 +35,10 @@ void displayProductStruct(Product *product)
 
 int main()
 {
-    Product product, *structPointer;
-    structPointer = &product;
+    Product *structPointer = new Product;
     getProductStructDetails(structPointer);
     displayProductStruct(structPointer);
 
+    delete structPointer;
     return 0;
 }
