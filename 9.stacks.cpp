@@ -63,13 +63,13 @@ public:
 
 int main()
 {
-    Stack *newStack = new Stack(4);
-    newStack->push(2);
-    newStack->push(6);
-    newStack->push(7);
-    newStack->push(9);
-    newStack->displayStack();
-    newStack->pop();
-    newStack->displayStack();
+    Stack newStack(4);
+    newStack.push(2);
+    newStack.push(6);
+    newStack.push(7);
+    newStack.push(9);
+    newStack.displayStack();
+    newStack.pop();
+    newStack.displayStack();
     return 0;
 }

@@ -35,7 +35,7 @@ public:
         }
         else
         {
-            rear = (rear++) % totalSize;
+            rear = (rear + 1) % totalSize;
         }
         array[rear] = value;
     }
@@ -52,7 +52,7 @@ public:
         }
         else
         {
-            front = (front++) % totalSize;
+            front = (front + +1) % totalSize;
         }
     }
 
@@ -95,15 +95,12 @@ public:
 
 int main()
 {
-    Queue *queuePtr = new Queue(5);
-    if (queuePtr != NULL)
-    {
-        queuePtr->enqueue(2);
-        queuePtr->enqueue(3);
-        queuePtr->enqueue(1);
-        queuePtr->enqueue(5);
-        queuePtr->enqueue(6);
-        queuePtr->enqueue(688);
-        queuePtr->dequeue();
-    }
+    Queue queue(5);
+    queue.enqueue(1);
+    queue.enqueue(6);
+    queue.enqueue(3);
+    queue.enqueue(6);
+    queue.enqueue(5);
+    queue.dequeue();
+    queue.enqueue(7);
 }
