@@ -1,3 +1,4 @@
+// Write a C++ program to dynamically allocate memory for a stack data structure. Implement push and pop operations on this stack.
 #include <iostream>
 
 using namespace std;

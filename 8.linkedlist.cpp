@@ -1,3 +1,4 @@
+// Write a C++ program to dynamically allocate memory for a linked list and perform basic operations like insert and delete node(s).
 #include <iostream>
 
 using namespace std;

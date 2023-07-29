@@ -1,3 +1,4 @@
+// Write a C++ program to dynamically allocate memory for a queue data structure. Implement enqueue and dequeue operations on this queue.
 #include <iostream>
 
 using namespace std;

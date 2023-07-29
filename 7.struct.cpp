@@ -1,3 +1,4 @@
+// Write a C++ program to dynamically allocate memory for a structure and input its members from the user.
 #include <iostream>
 
 using namespace std;
